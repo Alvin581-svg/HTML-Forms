@@ -40,16 +40,28 @@ textarea{
 
 <script>
 
+<script>
+
 function validateForm(){
 
-let name = document.getElementById("fullname").value;
-let email = document.getElementById("email").value;
-let telephone = document.getElementById("telephone").value;
+let name = document.getElementById("fullname").value.trim();
+let email = document.getElementById("email").value.trim();
+let telephone = document.getElementById("telephone").value.trim();
 
 let interests = document.querySelectorAll('input[name="interest"]:checked');
 
-if(name === "" || email === "" || telephone === ""){
-alert("Please complete all required fields.");
+if(name === ""){
+alert("Please enter your full name.");
+return false;
+}
+
+if(email === ""){
+alert("Please enter your email address.");
+return false;
+}
+
+if(telephone === ""){
+alert("Please enter your telephone number.");
 return false;
 }
 
@@ -58,9 +70,13 @@ alert("Please select at least one area of interest.");
 return false;
 }
 
+alert("Application submitted successfully!");
+
 return true;
 
 }
+
+</script>
 
 </script>
 
