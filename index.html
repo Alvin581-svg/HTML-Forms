@@ -40,28 +40,30 @@ textarea{
 
 <script>
 function validateForm() {
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let phone = document.getElementById("phone").value;
 
-    if (name == "") {
-        alert("Full Name must not be empty");
+    let name = document.getElementById("fullname").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("telephone").value.trim();
+
+    if (name === "") {
+        alert("Please enter your Full Name");
         return false;
     }
 
-    if (email == "") {
-        alert("Email Address must not be empty");
+    if (email === "") {
+        alert("Please enter your Email Address");
         return false;
     }
 
-    if (phone == "") {
-        alert("Telephone Number must not be empty");
+    if (phone === "") {
+        alert("Please enter your Telephone Number");
         return false;
     }
 
     return true;
 }
 </script>
+
 
 </head>
 
